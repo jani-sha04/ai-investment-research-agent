@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+html,
+body {
+  background-color: #eeeae0;
+}
+
+body {
+  color: #1b2a3a;
+  font-family: var(--font-body);
+}
+
+/* Torn / stamped edge for the verdict seal */
+.stamp {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 3px solid currentColor;
+  border-radius: 3px;
+  padding: 0.4rem 1rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  filter: saturate(1.05);
+}
+
+.stamp::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.ledger-rule {
+  border-top: 1px dashed #c9c1ac;
+}
+
+.ledger-card {
+  background: #f6f3ea;
+  border: 1px solid #c9c1ac;
+  box-shadow: 3px 3px 0 rgba(27, 42, 58, 0.06);
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  animation: blink-caret 1s step-end infinite;
+}
+
+::selection {
+  background: #a97142;
+  color: #eeeae0;
+}

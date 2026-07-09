@@ -1,0 +1,35 @@
+{
+  "name": "ai-investment-research-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An AI agent that researches a company and decides whether to invest or pass, with full reasoning.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@langchain/anthropic": "^1.5.1",
+    "@langchain/core": "^1.2.1",
+    "@langchain/google-genai": "^2.2.0",
+    "@langchain/langgraph": "^1.4.7",
+    "@langchain/openai": "^1.5.3",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.25.32"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.15",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
